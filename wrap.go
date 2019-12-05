@@ -1,3 +1,4 @@
+// Package jsonwrap provides a simple API for JSON object nesting.
 package jsonwrap
 
 import (
@@ -6,8 +7,12 @@ import (
 	"fmt"
 )
 
+// A JSONWrapper instance provides JSON wrapping functionality with specific formatting and verification options.
 type JSONWrapper struct {
+	// Verify the provided JSON input string before attempting to wrap it
 	Verify   bool
+
+	// Pretty-format the resulting JSON output
 	Prettify bool
 }
 
@@ -27,6 +32,7 @@ func prettifyJson(jsonStr string) string {
 	return string(prettyJson.Bytes())
 }
 
+// Wrap handles the actual wrapping of the complete child JSON string within the parent object.
 func (j JSONWrapper) Wrap(parent string, child string) string {
 	if j.Verify && !validJson(child) {
 		fmt.Println("invalid input JSON")
@@ -41,6 +47,7 @@ func (j JSONWrapper) Wrap(parent string, child string) string {
 	return wrapped
 }
 
+// NewJSONWrapper instantiates a new JSONWrapper instance with the default configuration.
 func NewJSONWrapper() JSONWrapper {
 	return JSONWrapper{Verify: true, Prettify: true}
 }
