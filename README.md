@@ -72,7 +72,7 @@ COPYRIGHT:
 ## API Documentation
 
 Online API documentation is provided through `godoc`, and can be accessed directly on the
-[package entry](https://godoc.org/github.com/adaptant-labs/jsonwrap/api) in the godoc package repository.
+[package entry](https://godoc.org/github.com/adaptant-labs/jsonwrap) in the godoc package repository.
 
 ## Features and bugs
 
