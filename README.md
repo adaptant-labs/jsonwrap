@@ -1,5 +1,9 @@
 # JSONWrap
 
+[![godoc](https://godoc.org/github.com/adaptant-labs/jsonwrap?status.svg)](http://godoc.org/github.com/adaptant-labs/jsonwrap)
+[![Build Status](https://travis-ci.com/adaptant-labs/jsonwrap.svg?branch=master)](https://travis-ci.com/adaptant-labs/jsonwrap)
+[![Go Report Card](https://goreportcard.com/badge/github.com/adaptant-labs/jsonwrap)](https://goreportcard.com/report/github.com/adaptant-labs/jsonwrap)
+
 `jsonwrap` provides a simple API for JSON object nesting in Go.
 
 A convenience CLI app implementing the API and capable of forwarding the wrapped JSON to a remote HTTP endpoint is
