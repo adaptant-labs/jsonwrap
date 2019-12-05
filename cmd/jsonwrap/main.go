@@ -15,29 +15,29 @@ func main() {
 	var wrappers cli.StringSlice
 
 	app := &cli.App{
-		Name: "jsonwrap",
-		Usage: "CLI for JSON object nesting and HTTP forwarding",
-		ArgsUsage: "<JSON file>",
+		Name:        "jsonwrap",
+		Usage:       "CLI for JSON object nesting and HTTP forwarding",
+		ArgsUsage:   "<JSON file>",
 		Description: "A convenience CLI tool for nesting JSON objects and forwarding the result to a remote HTTP endpoint",
-		Author: "Adaptant Labs <labs@adaptant.io>",
-		Copyright: "(c) 2019 Adaptant Solutions AG",
-		Version: "0.0.1",
-		Flags: []cli.Flag {
+		Author:      "Adaptant Labs <labs@adaptant.io>",
+		Copyright:   "(c) 2019 Adaptant Solutions AG",
+		Version:     "0.0.1",
+		Flags: []cli.Flag{
 			&cli.StringFlag{
-				Name: "target",
-				Usage: "Target URL to forward wrapped JSON to",
+				Name:        "target",
+				Usage:       "Target URL to forward wrapped JSON to",
 				Destination: &destinationUrl,
 			},
 			&cli.StringFlag{
-				Name: "method",
-				Usage: "Forwarding method to use",
-				Value: "POST",
+				Name:        "method",
+				Usage:       "Forwarding method to use",
+				Value:       "POST",
 				Destination: &method,
 			},
 			&cli.StringSliceFlag{
-				Name: "wrap",
-				Usage: "Name of object to nest under",
-				Value: &wrappers,
+				Name:     "wrap",
+				Usage:    "Name of object to nest under",
+				Value:    &wrappers,
 				Required: true,
 			},
 		},

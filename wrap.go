@@ -7,7 +7,7 @@ import (
 )
 
 type JSONWrapper struct {
-	Verify bool
+	Verify   bool
 	Prettify bool
 }
 

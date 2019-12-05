@@ -7,7 +7,6 @@ import (
 	"strings"
 )
 
-
 func jsonFromFile(filename string) (string, error) {
 	jsonBytes, err := ioutil.ReadFile(filename)
 	if err != nil {
